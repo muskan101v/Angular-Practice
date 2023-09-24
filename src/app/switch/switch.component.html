@@ -1,0 +1,10 @@
+<h1 class="text-center">ngSwitch</h1>
+<div class="container">
+  <select class="dropdown-menu" (change)="onSelect($event)">
+    <option class="dropdown-item" *ngFor="let item of colorList" [value]="item">
+      {{ item }}
+    </option>
+  </select>
+
+  <p [ngStyle]="{ color: color }">{{ defaultStatement }}</p>
+</div>

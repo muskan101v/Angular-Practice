@@ -1,0 +1,22 @@
+<h1 class="text-center">About Track By</h1>
+
+<div class="container">
+  <button class="btn btn-primary my-2" (click)="updatetable()">Update</button>
+  <table border="1" cellSpacing="6" cellPadding="6">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>User Id</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let item of albums_data; trackBy: getAlbumId">
+        <td>{{ item.id }}</td>
+        <td>{{ item.title }}</td>
+        <td>{{ item.userId }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
